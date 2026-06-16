@@ -1,61 +1,140 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Certificate Verification</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Certificate Verification</title>
 
-    <style>
-        body{
-            font-family: Arial, sans-serif;
-            background:#f5f5f5;
-            padding:20px;
-        }
+<style>
+body{
+background:#f3f5f7;
+font-family:Arial,sans-serif;
+padding:30px;
+}
 
-        .card{
-            max-width:700px;
-            margin:auto;
-            background:white;
-            padding:30px;
-            border-radius:10px;
-            box-shadow:0 0 10px rgba(0,0,0,0.1);
-        }
+.container{
+max-width:1000px;
+margin:auto;
+background:#fff;
+padding:40px;
+border-radius:20px;
+box-shadow:0 5px 20px rgba(0,0,0,.1);
+}
 
-        h1{
-            color:green;
-        }
+.logo{
+display:block;
+margin:auto;
+width:600px;
+max-width:100%;
+}
 
-        .logo{
-            width:120px;
-            display:block;
-            margin:auto;
-            margin-bottom:20px;
-        }
+.title{
+text-align:center;
+color:#15803d;
+font-size:42px;
+font-weight:bold;
+margin-top:20px;
+}
 
-        p{
-            font-size:18px;
-        }
-    </style>
+.subtitle{
+text-align:center;
+font-size:20px;
+margin-bottom:30px;
+}
+
+table{
+width:100%;
+border-collapse:collapse;
+margin-top:20px;
+}
+
+td{
+padding:18px;
+border:1px solid #ddd;
+}
+
+.label{
+font-weight:bold;
+background:#fafafa;
+width:35%;
+}
+
+.status{
+background:#dcfce7;
+color:#15803d;
+padding:10px 15px;
+border-radius:6px;
+font-weight:bold;
+display:inline-block;
+}
+
+.verify-box{
+margin-top:30px;
+padding:20px;
+background:#ecfdf5;
+border:2px solid #86efac;
+text-align:center;
+font-weight:bold;
+color:#15803d;
+border-radius:10px;
+}
+</style>
 </head>
 
 <body>
 
-<div class="card">
+<div class="container">
 
-    <img src="/logo.png" class="logo" alt="TTCTC Logo">
+<img src="/logo.png" class="logo">
 
-    <h1>✅ Certificate Verified</h1>
+<div class="title">
+✅ Certificate Verified
+</div>
 
-    <p><strong>Student Name:</strong> Vengatesh M</p>
+<div class="subtitle">
+This is a genuine certificate issued by
+<b>Thiruvalluvar CNC Training Centre</b>
+</div>
 
-    <p><strong>Certificate No:</strong> TTCTC20180607</p>
+<table>
 
-    <p><strong>Course:</strong> Modelling & Manufacturing using MASTERCAM</p>
+<tr>
+<td class="label">Student Name</td>
+<td>Vengatesh M</td>
+</tr>
 
-    <p><strong>Training Period:</strong> 06/06/2018 - 20/07/2018</p>
+<tr>
+<td class="label">Certificate No</td>
+<td>TTCTC20180607</td>
+</tr>
 
-    <p><strong>Institute:</strong> Thiruvalluvar CNC Training Centre</p>
+<tr>
+<td class="label">Course</td>
+<td>Modelling & Manufacturing using MASTERCAM</td>
+</tr>
 
-    <p><strong>Status:</strong> Valid Certificate</p>
+<tr>
+<td class="label">Training Period</td>
+<td>06/06/2018 - 20/07/2018</td>
+</tr>
+
+<tr>
+<td class="label">Institute</td>
+<td>Thiruvalluvar CNC Training Centre</td>
+</tr>
+
+<tr>
+<td class="label">Status</td>
+<td>
+<span class="status">VALID CERTIFICATE</span>
+</td>
+</tr>
+
+</table>
+
+<div class="verify-box">
+✓ This certificate has been verified and is valid.
+</div>
 
 </div>
 
