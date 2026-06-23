@@ -2,66 +2,119 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Certificate Verification</title>
+
     <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+
         body{
-            font-family: Arial, sans-serif;
-            background:#f4f4f4;
+            font-family:Arial, sans-serif;
+            background:#f4f7fa;
             display:flex;
             justify-content:center;
             align-items:center;
-            height:100vh;
-            margin:0;
+            min-height:100vh;
         }
-        .box{
+
+        .container{
             background:#fff;
-            padding:30px;
-            border-radius:10px;
-            box-shadow:0 0 10px rgba(0,0,0,0.1);
+            padding:35px;
+            width:400px;
+            border-radius:12px;
+            box-shadow:0 5px 20px rgba(0,0,0,0.1);
             text-align:center;
-            width:350px;
         }
+
+        .logo{
+            width:120px;
+            margin-bottom:15px;
+        }
+
+        h2{
+            color:#003366;
+            margin-bottom:10px;
+        }
+
+        p{
+            color:#666;
+            margin-bottom:20px;
+            font-size:14px;
+        }
+
         input{
             width:100%;
             padding:12px;
-            margin:15px 0;
             border:1px solid #ccc;
-            border-radius:5px;
-            box-sizing:border-box;
+            border-radius:6px;
+            font-size:16px;
+            margin-bottom:15px;
         }
+
         button{
             width:100%;
             padding:12px;
-            background:#007bff;
+            background:#003366;
             color:#fff;
             border:none;
-            border-radius:5px;
+            border-radius:6px;
+            font-size:16px;
             cursor:pointer;
         }
+
         button:hover{
             background:#0056b3;
+        }
+
+        .footer{
+            margin-top:15px;
+            font-size:12px;
+            color:#777;
         }
     </style>
 </head>
 <body>
 
-<div class="box">
+<div class="container">
+
+    <img src="https://thiruvalluvarcnc.vercel.app/logo.png" alt="Logo" class="logo">
+
     <h2>Certificate Verification</h2>
+
+    <p>Enter your certificate number to verify.</p>
+
     <form onsubmit="verifyCertificate(event)">
-        <input type="text" id="certNo" placeholder="Enter Certificate Number" required>
-        <button type="submit">Verify</button>
+        <input
+            type="text"
+            id="certNo"
+            placeholder="Example: TCTC20230110"
+            required
+        >
+
+        <button type="submit">Verify Certificate</button>
     </form>
+
+    <div class="footer">
+        © Thiruvalluvar CNC Training Centre
+    </div>
+
 </div>
 
 <script>
 function verifyCertificate(event) {
     event.preventDefault();
 
-    let certNo = document.getElementById('certNo').value.trim().toUpperCase();
+    const certNo = document
+        .getElementById('certNo')
+        .value
+        .trim()
+        .toUpperCase();
 
-    if(certNo){
-        window.location.href = '/verify/' + certNo + '.html';
-    }
+    window.location.href = '/verify/' + certNo + '.html';
 }
 </script>
 
