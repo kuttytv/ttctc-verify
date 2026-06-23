@@ -1,10 +1,69 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta http-equiv="refresh" content="0; url=/verify/TTCTC20180607.html">
-<title>Redirecting...</title>
+    <meta charset="UTF-8">
+    <title>Certificate Verification</title>
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            background:#f4f4f4;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            height:100vh;
+            margin:0;
+        }
+        .box{
+            background:#fff;
+            padding:30px;
+            border-radius:10px;
+            box-shadow:0 0 10px rgba(0,0,0,0.1);
+            text-align:center;
+            width:350px;
+        }
+        input{
+            width:100%;
+            padding:12px;
+            margin:15px 0;
+            border:1px solid #ccc;
+            border-radius:5px;
+            box-sizing:border-box;
+        }
+        button{
+            width:100%;
+            padding:12px;
+            background:#007bff;
+            color:#fff;
+            border:none;
+            border-radius:5px;
+            cursor:pointer;
+        }
+        button:hover{
+            background:#0056b3;
+        }
+    </style>
 </head>
 <body>
-Redirecting...
+
+<div class="box">
+    <h2>Certificate Verification</h2>
+    <form onsubmit="verifyCertificate(event)">
+        <input type="text" id="certNo" placeholder="Enter Certificate Number" required>
+        <button type="submit">Verify</button>
+    </form>
+</div>
+
+<script>
+function verifyCertificate(event) {
+    event.preventDefault();
+
+    let certNo = document.getElementById('certNo').value.trim().toUpperCase();
+
+    if(certNo){
+        window.location.href = '/verify/' + certNo + '.html';
+    }
+}
+</script>
+
 </body>
 </html>
